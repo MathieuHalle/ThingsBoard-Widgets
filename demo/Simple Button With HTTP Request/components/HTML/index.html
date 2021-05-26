@@ -1,0 +1,23 @@
+<fieldset class="widget-box" id="wrapper">
+  <div class="actions-form-box">
+    <button
+      mat-stroked-button
+      color="primary"
+      class="go-btn"
+      (click)="goButtonHandler()"
+    >
+      Go !
+    </button>
+  </div>
+
+  <div class="result-box">
+    {{ joke?.value }}
+    <div class="date">{{ joke?.created_at }}</div>
+  </div>
+</fieldset>
+
+<mat-progress-bar
+  [fxShow]="isLoading"
+  style="position: absolute; bottom: 0"
+  mode="indeterminate"
+></mat-progress-bar>
